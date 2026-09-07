@@ -1,5 +1,6 @@
 import { useLanguage } from '@/modules/i18n/hooks/useLanguage';
 import { Icon } from '@/shared/components/ui/Icon';
+import { PRIMARY_CTA_TARGET } from '@/shared/constants/site.constants';
 import { HERO_CONTENT } from '../constants/hero.content';
 import { HeroBanner } from './HeroBanner';
 
@@ -71,7 +72,7 @@ export function HeroSection() {
       {/* Acciones */}
       <div className="flex flex-col gap-space-xs sm:flex-row">
         <a
-          href="#work"
+          href={PRIMARY_CTA_TARGET}
           className="flex flex-1 -skew-x-6 items-center justify-center gap-space-xs bg-primary-container px-space-md py-space-sm text-on-primary-container shadow-[4px_4px_0px_#fde400] transition-transform hover:-translate-y-0.5"
         >
           <span className="inline-flex skew-x-6 items-center gap-space-xs font-display text-[15px] tracking-[0.08em] uppercase">

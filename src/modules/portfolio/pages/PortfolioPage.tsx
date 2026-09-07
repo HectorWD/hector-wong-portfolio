@@ -5,6 +5,7 @@ import { ExperienceSection } from '@/modules/experience/components/ExperienceSec
 import { HeroSection } from '@/modules/hero/components/HeroSection';
 import { ProjectsSection } from '@/modules/projects/components/ProjectsSection';
 import { SkillsSection } from '@/modules/skills/components/SkillsSection';
+import { SHOW_PROJECTS } from '@/shared/constants/site.constants';
 import { SiteLayout } from '@/shared/layout/SiteLayout';
 
 /**
@@ -17,7 +18,7 @@ export function PortfolioPage() {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
-      <ProjectsSection />
+      {SHOW_PROJECTS ? <ProjectsSection /> : null}
       <SkillsSection />
       <EducationSection />
       <ContactSection />

@@ -29,13 +29,30 @@ export const BRAND: Localized<{ mark: string; tagline: string }> = {
   es: { mark: 'PHANTOM DEV', tagline: 'TOMA TU TIEMPO' },
 };
 
-export const NAV_ITEMS: readonly NavItem[] = [
+/**
+ * Sección de proyectos.
+ *
+ * Apagada mientras no haya proyectos propios que enseñar: una sección con
+ * huecos marcados resta más de lo que suma en un portafolio publicado.
+ * Al ponerla en `true` reaparece en la página y en la navegación, y las
+ * tarjetas salen de `src/modules/projects/constants/projects.content.ts`.
+ */
+export const SHOW_PROJECTS = false;
+
+const ALL_NAV_ITEMS: readonly NavItem[] = [
   { id: 'about', icon: 'person' },
   { id: 'experience', icon: 'work_history' },
   { id: 'work', icon: 'stars' },
   { id: 'skills', icon: 'bolt' },
   { id: 'contact', icon: 'mail' },
 ];
+
+export const NAV_ITEMS: readonly NavItem[] = ALL_NAV_ITEMS.filter(
+  (item) => item.id !== 'work' || SHOW_PROJECTS,
+);
+
+/** Destino del botón principal de la portada. */
+export const PRIMARY_CTA_TARGET = SHOW_PROJECTS ? '#work' : '#experience';
 
 export const NAV_LABELS: Localized<Record<string, string>> = {
   en: {

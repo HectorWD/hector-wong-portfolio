@@ -58,11 +58,20 @@ hace falta tocar ningún componente.
 
 ## Proyectos
 
-La sección **03 // Featured Heists** está vacía a propósito: los proyectos que
-traía el diseño original eran inventados y se quitaron. Mientras el arreglo esté
-vacío se pintan huecos marcados; en cuanto agregues una entrada en
-`src/modules/projects/constants/projects.content.ts` la sección pasa sola a
-tarjetas reales. El formato de una entrada está documentado en ese mismo archivo.
+La sección de proyectos está **apagada**. Los que traía el diseño original eran
+inventados y se quitaron, y una sección con huecos marcados resta más de lo que
+suma en un portafolio publicado.
+
+Para volver a encenderla:
+
+1. Pon `SHOW_PROJECTS = true` en `src/shared/constants/site.constants.ts`.
+   Con eso reaparece en la página, en la navegación de escritorio y en la de
+   móvil, y el botón principal de la portada vuelve a apuntar ahí.
+2. Agrega tus proyectos en `src/modules/projects/constants/projects.content.ts`.
+   El formato de una entrada está documentado en ese archivo.
+
+Mientras el arreglo de proyectos esté vacío, la sección encendida pinta huecos
+marcados; con entradas, pasa sola a tarjetas reales.
 
 ## Contenido
 
@@ -145,4 +154,4 @@ necesite.
 
 ## Pendiente
 
-- **Proyectos propios** para llenar la sección 03.
+- **Proyectos propios** para encender la sección de proyectos.
