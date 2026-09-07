@@ -17,7 +17,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`relative z-10 mx-auto flex w-full max-w-reading flex-col gap-space-md px-gutter-mobile py-space-xl sm:px-gutter-desktop ${className}`}
+      className={`relative z-10 mx-auto flex w-full max-w-reading flex-col gap-space-md px-gutter-mobile py-space-xl sm:px-gutter-desktop lg:max-w-none lg:py-space-2xl ${className}`}
     >
       {children}
     </section>

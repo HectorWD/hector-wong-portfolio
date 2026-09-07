@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { useLanguage } from '@/modules/i18n/hooks/useLanguage';
 import { Icon } from '@/shared/components/ui/Icon';
 import { Section } from '@/shared/components/ui/Section';
+import { Reveal } from '@/shared/components/ui/Reveal';
 import { SectionBanner } from '@/shared/components/ui/SectionBanner';
 import { CONTACT } from '@/shared/constants/site.constants';
 import { CONTACT_CONTENT } from '../constants/contact.content';
@@ -39,7 +40,7 @@ export function ContactSection() {
     <Section id="contact">
       <SectionBanner title={content.sectionTitle} meta={content.sectionMeta} />
 
-      <div className="-skew-x-3 bg-primary-container p-space-md shadow-[6px_6px_0px_#fde400]">
+      <Reveal delay={60} className="-skew-x-3 bg-primary-container p-space-md shadow-[6px_6px_0px_#fde400]">
         <div className="flex skew-x-3 flex-col gap-space-sm">
           <h3 className="font-display text-headline-lg-mobile text-on-primary-container uppercase">
             {content.headline}
@@ -95,7 +96,7 @@ export function ContactSection() {
             </button>
           </form>
         </div>
-      </div>
+      </Reveal>
 
       <div className="flex flex-col gap-space-xs">
         <p className="font-display text-[12px] tracking-[0.08em] text-outline uppercase">

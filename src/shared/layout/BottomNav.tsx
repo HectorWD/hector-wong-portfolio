@@ -17,7 +17,7 @@ export function BottomNav() {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-outline-variant bg-surface-container-lowest pb-safe"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-outline-variant bg-surface-container-lowest pb-safe lg:hidden"
       aria-label="Section navigation"
     >
       <ul className="mx-auto flex max-w-reading items-stretch justify-between px-space-xs py-space-xs">

@@ -1,15 +1,18 @@
+import { Reveal } from './Reveal';
+
 /**
- * Cabecera de seccion: rotulo blanco cortado en diagonal con sombra roja,
- * y a la derecha una etiqueta monoespaciada con el estado de la seccion.
+ * Cabecera de sección: rótulo blanco cortado en diagonal con sombra roja,
+ * y a la derecha una etiqueta monoespaciada con el estado de la sección.
  *
  * El `-skew-x-6` del contenedor se compensa con `skew-x-6` en el texto para
- * que las letras queden rectas y solo se incline la caja.
+ * que las letras queden rectas y solo se incline la caja. Al entrar en pantalla
+ * un destello recorre el rótulo.
  */
 export function SectionBanner({ title, meta }: { title: string; meta?: string }) {
   return (
-    <div className="flex -skew-x-6 items-center justify-between gap-space-xs">
-      <h2 className="bg-secondary px-space-sm py-space-2xs text-on-secondary-fixed shadow-[3px_3px_0px_#e60012]">
-        <span className="inline-block skew-x-6 font-display text-headline-md tracking-wider uppercase">
+    <Reveal className="flex -skew-x-6 items-center justify-between gap-space-xs">
+      <h2 className="slash-sweep bg-secondary px-space-sm py-space-2xs text-on-secondary-fixed shadow-[3px_3px_0px_#e60012]">
+        <span className="inline-block skew-x-6 font-display text-headline-md tracking-wider uppercase lg:text-headline-lg-mobile">
           {title}
         </span>
       </h2>
@@ -19,6 +22,6 @@ export function SectionBanner({ title, meta }: { title: string; meta?: string })
           <span className="inline-block skew-x-6">{meta}</span>
         </p>
       ) : null}
-    </div>
+    </Reveal>
   );
 }

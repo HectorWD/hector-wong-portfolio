@@ -110,10 +110,39 @@ externo.
 El estilo gráfico (rojo y negro, cortes en diagonal, medios tonos) sí está
 inspirado en el juego, pero no reproduce nada suyo.
 
+## Disposiciones
+
+Dos layouts sobre el mismo contenido, con el corte en `lg` (1024 px):
+
+- **Móvil.** Barra superior con la marca, contenido a ancho completo y
+  navegación inferior tipo aplicación.
+- **Escritorio.** Columna fija a la izquierda (420 px, 480 px desde `xl`) con
+  identidad, contacto, navegación numerada, descarga del CV y el conmutador de
+  idioma. El contenido va a su derecha, bajo una franja de estado con el
+  progreso de lectura.
+
+El nombre y el rol aparecen una sola vez en cada disposición: en escritorio
+viven en la columna lateral y se ocultan en la portada.
+
+## Movimiento
+
+Las secciones entran con el corte diagonal del diseño: desplazamiento, una
+ligera inclinación y un destello que recorre el rótulo (`.reveal` y
+`.slash-sweep` en `src/styles/index.css`).
+
+`Reveal` parte de `opacity: 0`, así que la animación no puede ser el único
+camino al estado visible. Hay dos redes de seguridad: si falta
+`IntersectionObserver` se muestra de inmediato, y si el observador existe pero
+nunca entrega una primera notificación, un temporizador destapa el contenido.
+Con `prefers-reduced-motion` el estado inicial se neutraliza por completo en el
+CSS, sin depender de JavaScript.
+
+Del diseño de Stitch se dejaron fuera a propósito dos cosas: las líneas de
+velocidad que se generaban en cada evento de scroll (seis nodos nuevos por
+disparo, mucho trabajo para un efecto que apenas se lee) y el auto-scroll de
+demostración, que es un recurso de presentación y no algo que un portafolio
+necesite.
+
 ## Pendiente
 
-- **Layout de escritorio.** El diseño de Stitch es solo móvil (780 px). En
-  pantallas grandes el sitio se muestra como una columna centrada de 780 px:
-  funciona y no se rompe, pero aprovechar el ancho es una decisión de diseño
-  todavía sin tomar.
 - **Proyectos propios** para llenar la sección 03.

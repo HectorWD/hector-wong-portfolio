@@ -12,7 +12,7 @@ export function HeroSection() {
   const hero = t(HERO_CONTENT);
 
   return (
-    <section className="relative z-10 mx-auto flex w-full max-w-reading flex-col gap-space-md px-gutter-mobile py-space-lg sm:px-gutter-desktop">
+    <section className="relative z-10 mx-auto flex w-full max-w-reading flex-col gap-space-md px-gutter-mobile py-space-lg sm:px-gutter-desktop lg:max-w-none lg:pt-space-xl">
       {/* Banda de estado */}
       <div className="flex -skew-x-6 items-center justify-between gap-space-xs">
         <p className="border-l-4 border-primary-container bg-surface-container-high px-space-xs py-1">
@@ -33,7 +33,7 @@ export function HeroSection() {
           <HeroBanner className="h-full w-full" />
         </div>
 
-        <h1 className="absolute bottom-space-sm -left-1 -skew-x-6 bg-primary-container px-space-sm py-space-2xs text-on-primary-container shadow-hard-sm">
+        <h1 className="absolute bottom-space-sm -left-1 -skew-x-6 bg-primary-container lg:hidden px-space-sm py-space-2xs text-on-primary-container shadow-hard-sm">
           <span className="inline-block skew-x-6 font-display text-headline-lg-mobile tracking-wide uppercase">
             {hero.nameBanner}
           </span>
@@ -42,13 +42,13 @@ export function HeroSection() {
 
       {/* Rol + titular */}
       <div className="flex flex-col gap-space-xs">
-        <p className="w-fit -skew-x-6 bg-surface-container-high px-space-xs py-1">
+        <p className="w-fit -skew-x-6 bg-surface-container-high px-space-xs py-1 lg:hidden">
           <span className="inline-block skew-x-6 font-code text-code-snippet font-bold tracking-wider text-tertiary">
             {hero.roleLabel}
           </span>
         </p>
 
-        <p className="font-display text-display-hero-mobile text-secondary uppercase sm:text-headline-xl">
+        <p className="font-display text-display-hero-mobile text-secondary uppercase sm:text-headline-xl lg:text-display-hero">
           {hero.tagline}
         </p>
       </div>

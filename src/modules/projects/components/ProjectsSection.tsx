@@ -1,5 +1,6 @@
 import { useLanguage } from '@/modules/i18n/hooks/useLanguage';
 import { Section } from '@/shared/components/ui/Section';
+import { Reveal } from '@/shared/components/ui/Reveal';
 import { SectionBanner } from '@/shared/components/ui/SectionBanner';
 import { PLACEHOLDER_SLOTS, PROJECTS, PROJECTS_CONTENT } from '../constants/projects.content';
 import { ProjectCard } from './ProjectCard';
@@ -18,9 +19,15 @@ export function ProjectsSection() {
 
       <div className="flex flex-col gap-space-md">
         {hasProjects
-          ? projects.map((project) => <ProjectCard key={project.id} project={project} />)
+          ? projects.map((project, index) => (
+              <Reveal key={project.id} delay={index * 70}>
+                <ProjectCard project={project} />
+              </Reveal>
+            ))
           : Array.from({ length: PLACEHOLDER_SLOTS }, (_, index) => (
-              <ProjectPlaceholderCard key={index} content={content} />
+              <Reveal key={index} delay={index * 70}>
+                <ProjectPlaceholderCard content={content} />
+              </Reveal>
             ))}
       </div>
     </Section>

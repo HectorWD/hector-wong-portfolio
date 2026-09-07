@@ -8,7 +8,7 @@ export function TopBar() {
   const brand = t(BRAND);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 pt-safe">
+    <header className="fixed inset-x-0 top-0 z-50 pt-safe lg:hidden">
       <div className="mx-auto flex max-w-reading items-center justify-between gap-space-xs bg-surface/90 px-gutter-mobile py-space-xs backdrop-blur-sm sm:px-gutter-desktop">
         <div className="flex -skew-x-6 items-center">
           <a

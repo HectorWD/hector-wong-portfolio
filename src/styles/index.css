@@ -205,6 +205,78 @@
   box-shadow: 3px 3px 0 0 #000000;
 }
 
+/* ---------------------------------------------------------------------------
+   Entrada al hacer scroll
+   El elemento llega desplazado, ligeramente inclinado y encogido, y se asienta
+   cuando entra en pantalla. La curva es un ease-out expo: arranca rapido y
+   frena largo, que es lo que hace que se sienta como un corte de comic y no
+   como un desvanecido generico.
+--------------------------------------------------------------------------- */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(32px) skewX(-4deg) scale(0.97);
+  transition:
+    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+@utility reveal-in {
+  opacity: 1;
+  transform: translateY(0) skewX(0deg) scale(1);
+}
+
+/* Destello diagonal que barre el rotulo al aparecer. */
+@utility slash-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.slash-sweep::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: -100%;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(230, 0, 18, 0.35),
+    rgba(253, 228, 0, 0.5),
+    transparent
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  transition: left 0.75s ease-out;
+}
+
+.reveal-in .slash-sweep::after,
+.slash-sweep.reveal-in::after {
+  left: 150%;
+}
+
+/*
+ * Con movimiento reducido no basta con acortar la transicion: si el observador
+ * fallara, el contenido quedaria invisible. Aqui se neutraliza el estado
+ * inicial por completo.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .slash-sweep::after {
+    display: none;
+  }
+}
+
+/* Trama de puntos como degradado: mas barata que el SVG para fondos amplios. */
+@utility halftone-bg {
+  background-image: radial-gradient(rgba(230, 0, 18, 0.12) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
 /* Iconografia Material Symbols usada por el diseno original. */
 @utility icon {
   font-family: 'Material Symbols Outlined';

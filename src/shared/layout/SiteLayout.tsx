@@ -1,15 +1,19 @@
 import type { ReactNode } from 'react';
 import { HalftoneBackdrop } from '../components/ui/HalftoneBackdrop';
 import { BottomNav } from './BottomNav';
+import { Sidebar } from './Sidebar';
 import { SiteFooter } from './SiteFooter';
+import { StatusBar } from './StatusBar';
 import { TopBar } from './TopBar';
 
 /**
- * Estructura de la pagina: trama de fondo a sangre, barra superior fija,
- * contenido y barra de navegacion inferior.
+ * Dos disposiciones sobre el mismo contenido.
  *
- * El padding inferior deja sitio a la barra fija para que la ultima seccion
- * no quede tapada.
+ * Móvil (hasta `lg`): barra superior con la marca, contenido a ancho completo
+ * y navegación inferior tipo aplicación.
+ *
+ * Escritorio (`lg` en adelante): columna fija de identidad y navegación a la
+ * izquierda, y el contenido desplazado a su derecha bajo una franja de estado.
  */
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
@@ -19,11 +23,16 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       </div>
 
       <TopBar />
+      <Sidebar />
 
-      <main id="top" className="relative z-10 pt-20 pb-32">
-        {children}
-        <SiteFooter />
-      </main>
+      <div className="relative z-10 lg:ml-[420px] xl:ml-[480px]">
+        <StatusBar />
+
+        <main id="top" className="pt-20 pb-32 lg:pt-0 lg:pb-space-2xl">
+          {children}
+          <SiteFooter />
+        </main>
+      </div>
 
       <BottomNav />
     </div>

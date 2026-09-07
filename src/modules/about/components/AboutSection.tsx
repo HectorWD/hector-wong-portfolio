@@ -2,6 +2,7 @@ import { useLanguage } from '@/modules/i18n/hooks/useLanguage';
 import { Icon } from '@/shared/components/ui/Icon';
 import { Section } from '@/shared/components/ui/Section';
 import { SectionBanner } from '@/shared/components/ui/SectionBanner';
+import { Reveal } from '@/shared/components/ui/Reveal';
 import { SlashCard } from '@/shared/components/ui/SlashCard';
 import { CV_FILES } from '@/shared/constants/site.constants';
 import { ABOUT_CONTENT } from '../constants/about.content';
@@ -17,6 +18,7 @@ export function AboutSection() {
     <Section id="about">
       <SectionBanner title={about.sectionTitle} meta={about.sectionMeta} />
 
+      <Reveal delay={60}>
       <SlashCard accent="red">
         <h3 className="flex items-center gap-space-xs font-display text-headline-md tracking-wide text-secondary uppercase">
           <Icon name="psychology" className="text-[22px] text-secondary-container" />
@@ -50,20 +52,21 @@ export function AboutSection() {
           </a>
         </div>
       </SlashCard>
+      </Reveal>
 
-      <ul className="grid grid-cols-3 gap-space-xs">
+      <Reveal delay={120} as="ul" className="grid grid-cols-3 gap-space-xs">
         {about.stats.map((stat) => (
           <li
             key={stat.label}
-            className="flex flex-col justify-center gap-1 bg-surface-container-high p-space-xs text-center"
+            className="flex flex-col justify-center gap-1 bg-surface-container-high p-space-xs text-center lg:p-space-md"
           >
-            <span className="font-display text-headline-md text-tertiary">{stat.value}</span>
+            <span className="font-display text-headline-md text-tertiary lg:text-headline-lg">{stat.value}</span>
             <span className="font-display text-[11px] tracking-[0.08em] text-on-surface-variant uppercase">
               {stat.label}
             </span>
           </li>
         ))}
-      </ul>
+      </Reveal>
     </Section>
   );
 }
