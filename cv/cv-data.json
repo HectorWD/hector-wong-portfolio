@@ -1,0 +1,134 @@
+{
+  "contact": {
+    "name": "Hector Wong",
+    "email": "hectorwong2110@gmail.com",
+    "phone": "+52 642 164 2529",
+    "location": "Monterrey, Mexico",
+    "github": "github.com/HectorWD",
+    "linkedin": "linkedin.com/in/wongduranhector"
+  },
+
+  "en": {
+    "headline": "Frontend Developer · React / React Native",
+    "sections": {
+      "profile": "Profile",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Technical Skills",
+      "languages": "Languages"
+    },
+    "profile": "Frontend Developer with over four years of production experience in React, React Native and Next.js. At Ambit.la I build across a full restaurant-management SaaS ecosystem — cloud point of sale, reporting, e-commerce, and a fleet-management mobile application with more than 50,000 downloads on Google Play. I work in TypeScript with automated test coverage, and care about interfaces that stay maintainable long after they ship.",
+    "experience": [
+      {
+        "role": "Frontend Developer",
+        "company": "Ambit.la (formerly Directo Group)",
+        "location": "Monterrey, Mexico",
+        "dates": "Oct 2022 – Present",
+        "context": "Ambit One is a cloud restaurant-management suite — point of sale, inventory, kitchen display and e-invoicing — used across Latin America, integrated with Rappi, Uber Eats and DiDi Food, and currently expanding into Argentina and Peru.",
+        "bullets": [
+          "Develop and maintain the frontend across the full product ecosystem: the cloud point-of-sale system, the e-commerce storefront, and reporting interfaces that surface sales and operational data to restaurant operators.",
+          "Build Ambit Driver in React Native, a delivery-fleet application with more than 50,000 downloads on Google Play, supporting live order assignment, real-time delivery tracking and multi-branch administration.",
+          "Improve organic search visibility of the public product site through semantic HTML structure and meta tag optimisation.",
+          "Work in TypeScript with Jest and Vitest coverage, applying SOLID principles to keep component architecture scalable and maintainable."
+        ]
+      },
+      {
+        "role": "Frontend Specialisation",
+        "company": "Self-directed",
+        "location": "",
+        "dates": "2021 – 2022",
+        "context": "",
+        "bullets": [
+          "Advanced React bootcamp and a self-built portfolio of applications — custom hooks, API-driven SPAs and Next.js projects — while moving from desktop and backend development into frontend engineering."
+        ]
+      },
+      {
+        "role": "Programmer",
+        "company": "Hancarsoft",
+        "location": "Sonora, Mexico",
+        "dates": "Jan 2021 – Apr 2021",
+        "context": "",
+        "bullets": [
+          "Developed nomenclature-management software: application logic and user interfaces in C#, with database design and administration in SQL Server."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Eng. in Software Engineering",
+        "school": "Universidad Estatal de Sonora",
+        "dates": "Aug 2017 – Jun 2021",
+        "note": "Degree completed; professional certification obtained."
+      }
+    ],
+    "skills": [
+      { "label": "Core", "items": "TypeScript, JavaScript (ES6+), HTML5, CSS3, C#" },
+      { "label": "Frameworks", "items": "React, React Native, Next.js, Node.js" },
+      { "label": "Testing & tools", "items": "Jest, Vitest, Git, GitHub, SQL Server" },
+      { "label": "Practices", "items": "Responsive design, user interface design, SOLID principles, SEO fundamentals" },
+      { "label": "Languages", "items": "Spanish (native), English (B2 — professional working proficiency)" }
+    ]
+  },
+
+  "es": {
+    "headline": "Desarrollador Frontend · React / React Native",
+    "sections": {
+      "profile": "Perfil",
+      "experience": "Experiencia",
+      "education": "Formación",
+      "skills": "Competencias Técnicas",
+      "languages": "Idiomas"
+    },
+    "profile": "Desarrollador Frontend con más de cuatro años de experiencia en producción con React, React Native y Next.js. En Ambit.la desarrollo sobre un ecosistema SaaS de gestión de restaurantes: punto de venta en la nube, reportería, tienda en línea y una app móvil de flotillas con más de 50 000 descargas en Google Play. Trabajo con TypeScript y pruebas automatizadas, con foco en interfaces que siguen siendo mantenibles mucho después de publicarse.",
+    "experience": [
+      {
+        "role": "Desarrollador Frontend",
+        "company": "Ambit.la (anteriormente Directo Group)",
+        "location": "Monterrey, México",
+        "dates": "Oct 2022 – Actualidad",
+        "context": "Ambit One es una suite en la nube para restaurantes —punto de venta, inventarios, pantalla de cocina y facturación electrónica— usada en toda Latinoamérica, integrada con Rappi, Uber Eats y DiDi Food, y en expansión hacia Argentina y Perú.",
+        "bullets": [
+          "Desarrollo y mantengo el frontend de todo el ecosistema: el punto de venta en la nube, la tienda en línea y las interfaces de reportería con datos de ventas y operación para los administradores de restaurantes.",
+          "Construyo Ambit Driver en React Native, una aplicación de gestión de flotillas de reparto con más de 50 000 descargas en Google Play, con asignación de pedidos en vivo, seguimiento de entregas en tiempo real y administración de múltiples sucursales.",
+          "Mejoré la visibilidad en buscadores del sitio público de producto mediante estructura HTML semántica y optimización de meta etiquetas.",
+          "Trabajo con TypeScript y pruebas en Jest y Vitest, aplicando principios SOLID para mantener una arquitectura de componentes escalable y mantenible."
+        ]
+      },
+      {
+        "role": "Especialización en Frontend",
+        "company": "Formación autodirigida",
+        "location": "",
+        "dates": "2021 – 2022",
+        "context": "",
+        "bullets": [
+          "Bootcamp de React avanzado y portafolio propio de aplicaciones —hooks personalizados, SPAs con APIs y proyectos en Next.js— para migrar del desarrollo de escritorio y backend a la ingeniería frontend."
+        ]
+      },
+      {
+        "role": "Programador",
+        "company": "Hancarsoft",
+        "location": "Sonora, México",
+        "dates": "Ene 2021 – Abr 2021",
+        "context": "",
+        "bullets": [
+          "Desarrollo de software de gestión de nomenclaturas: lógica de aplicación e interfaces de usuario en C#, con diseño y administración de bases de datos en SQL Server."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Ingeniería en Software",
+        "school": "Universidad Estatal de Sonora",
+        "dates": "Ago 2017 – Jun 2021",
+        "note": "Carrera concluida y titulado."
+      }
+    ],
+    "skills": [
+      { "label": "Lenguajes", "items": "TypeScript, JavaScript (ES6+), HTML5, CSS3, C#" },
+      { "label": "Frameworks", "items": "React, React Native, Next.js, Node.js" },
+      { "label": "Pruebas y tools", "items": "Jest, Vitest, Git, GitHub, SQL Server" },
+      { "label": "Prácticas", "items": "Diseño responsivo, diseño de interfaces, principios SOLID, fundamentos de SEO" },
+      { "label": "Idiomas", "items": "Español (nativo), inglés (B2 — competencia profesional de trabajo)" }
+    ]
+  }
+}

@@ -1,0 +1,227 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Design tokens — "Phantom Code / Acid Punk"
+   Portados desde el design system de Stitch (design-stitch/DESIGN.md).
+   Superficie casi negra, rojo de choque como acento primario, amarillo acido
+   para el segundo nivel y cian para acentos frios. La jerarquia se construye
+   con tipografia display condensada, cortes en diagonal y sombras duras.
+--------------------------------------------------------------------------- */
+@theme {
+  /* Tipografias */
+  --font-display: 'Anton', 'Arial Narrow', ui-sans-serif, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-code: ui-monospace, 'SFMono-Regular', 'Consolas', monospace;
+
+  /* Superficies */
+  --color-surface: #131317;
+  --color-surface-dim: #131317;
+  --color-surface-bright: #39393d;
+  --color-surface-container-lowest: #0e0e12;
+  --color-surface-container-low: #1b1b1f;
+  --color-surface-container: #1f1f23;
+  --color-surface-container-high: #2a292e;
+  --color-surface-container-highest: #353439;
+  --color-surface-variant: #353439;
+
+  /* Contenido sobre superficie */
+  --color-on-surface: #e4e1e7;
+  --color-on-surface-variant: #e9bcb6;
+  --color-outline: #af8782;
+  --color-outline-variant: #5f3f3b;
+
+  /* Primario — rojo Phantom */
+  --color-primary: #ffb4aa;
+  --color-on-primary: #690003;
+  --color-primary-container: #e60012;
+  --color-on-primary-container: #fff7f6;
+  --color-inverse-primary: #c0000d;
+
+  /* Secundario — amarillo acido */
+  --color-secondary: #ffffff;
+  --color-on-secondary: #373100;
+  --color-secondary-container: #fde400;
+  --color-on-secondary-container: #716500;
+  --color-secondary-fixed-dim: #dec800;
+  --color-on-secondary-fixed: #201c00;
+  --color-on-secondary-fixed-variant: #504700;
+
+  /* Terciario — cian */
+  --color-tertiary: #00daf3;
+  --color-on-tertiary: #00363d;
+  --color-tertiary-container: #007e8d;
+  --color-on-tertiary-container: #ebfcff;
+
+  /* Estados */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* Espaciado */
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4.5rem;
+  --spacing-space-4xl: 6rem;
+  --spacing-gutter-mobile: 1.25rem;
+  --spacing-gutter-desktop: 2.5rem;
+
+  /* Anchos de contenido */
+  --container-content: 1280px;
+  --container-reading: 780px;
+
+  /* Escala tipografica */
+  --text-display-hero: 96px;
+  --text-display-hero--line-height: 96px;
+  --text-display-hero--letter-spacing: -0.02em;
+  --text-display-hero--font-weight: 400;
+
+  --text-display-hero-mobile: 56px;
+  --text-display-hero-mobile--line-height: 56px;
+  --text-display-hero-mobile--letter-spacing: -0.01em;
+  --text-display-hero-mobile--font-weight: 400;
+
+  --text-headline-xl: 64px;
+  --text-headline-xl--line-height: 68px;
+  --text-headline-xl--letter-spacing: 0.01em;
+  --text-headline-xl--font-weight: 400;
+
+  --text-headline-xl-mobile: 40px;
+  --text-headline-xl-mobile--line-height: 44px;
+  --text-headline-xl-mobile--letter-spacing: 0.01em;
+  --text-headline-xl-mobile--font-weight: 400;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 44px;
+  --text-headline-lg--letter-spacing: 0.02em;
+  --text-headline-lg--font-weight: 400;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 32px;
+  --text-headline-lg-mobile--letter-spacing: 0.02em;
+  --text-headline-lg-mobile--font-weight: 400;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 28px;
+  --text-headline-md--letter-spacing: 0.04em;
+  --text-headline-md--font-weight: 400;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: -0.01em;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0.01em;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-badge: 14px;
+  --text-label-badge--line-height: 16px;
+  --text-label-badge--letter-spacing: 0.08em;
+  --text-label-badge--font-weight: 400;
+
+  --text-code-snippet: 13px;
+  --text-code-snippet--line-height: 20px;
+  --text-code-snippet--letter-spacing: 0em;
+  --text-code-snippet--font-weight: 500;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    overscroll-behavior-y: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-secondary-container);
+    outline-offset: 2px;
+  }
+
+  /* La barra de scroll rompe el encuadre a sangre del diseno. */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Utilidades propias del lenguaje visual
+--------------------------------------------------------------------------- */
+
+/* Respeta el area segura en dispositivos con notch. */
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Sombra dura estilo comic, sin blur. */
+@utility shadow-hard {
+  box-shadow: 4px 4px 0 0 #000000;
+}
+
+@utility shadow-hard-sm {
+  box-shadow: 3px 3px 0 0 #000000;
+}
+
+/* Iconografia Material Symbols usada por el diseno original. */
+@utility icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}

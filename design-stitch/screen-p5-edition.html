@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131317;color:#e4e1e7;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#93000a", "on-secondary-container": "#716500", "tertiary-fixed-dim": "#00daf3", "surface-bright": "#39393d", "on-primary-fixed-variant": "#930007", "on-secondary": "#373100", "primary-container": "#e60012", "on-secondary-fixed-variant": "#504700", "on-tertiary": "#00363d", "on-secondary-fixed": "#201c00", "on-surface": "#e4e1e7", "on-primary-container": "#fff7f6", "on-tertiary-fixed-variant": "#004f58", "secondary-container": "#fde400", "outline-variant": "#5f3f3b", "surface-container-high": "#2a292e", "on-primary-fixed": "#410001", "inverse-primary": "#c0000d", "surface-container-lowest": "#0e0e12", "on-background": "#e4e1e7", "secondary-fixed": "#fde400", "tertiary-container": "#007e8d", "on-surface-variant": "#e9bcb6", "background": "#131317", "primary-fixed": "#ffdad5", "on-primary": "#690003", "surface-container": "#1f1f23", "on-tertiary-fixed": "#001f24", "on-tertiary-container": "#ebfcff", "surface-dim": "#131317", "tertiary": "#00daf3", "primary": "#ffb4aa", "inverse-surface": "#e4e1e7", "surface-tint": "#ffb4aa", "surface-container-highest": "#353439", "surface-container-low": "#1b1b1f", "error": "#ffb4ab", "secondary-fixed-dim": "#dec800", "primary-fixed-dim": "#ffb4aa", "surface-variant": "#353439", "inverse-on-surface": "#303034", "tertiary-fixed": "#9cf0ff", "surface": "#131317", "on-error-container": "#ffdad6", "on-error": "#690005", "secondary": "#ffffff", "outline": "#af8782" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "1.25rem", "sidebar-width-desktop": "480px", "space-xs": "0.5rem", "space-xl": "2rem", "space-2xl": "3rem", "content-max-width": "1280px", "space-2xs": "0.25rem", "space-md": "1rem", "space-lg": "1.5rem", "space-4xl": "6rem", "gutter-desktop": "2.5rem", "space-sm": "0.75rem", "space-3xl": "4.5rem" }, fontFamily: { "code-snippet": ["monospace"], "headline-lg": ["Anton"], "headline-xl-mobile": ["Anton"], "headline-md": ["Anton"], "display-hero": ["Anton"], "headline-lg-mobile": ["Anton"], "headline-xl": ["Anton"], "display-hero-mobile": ["Anton"], "label-badge": ["Anton"], "body-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "code-snippet": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.04em", "fontWeight": "400" }], "display-hero": ["96px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-hero-mobile": ["56px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["14px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_4px_20px_rgba(0,0,0,0.6)]"><div class="h-20 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><div class="flex items-center gap-space-2xs"><span class="bg-primary-container text-on-primary-container font-label-badge text-label-badge px-space-2xs py-0.5 -skew-x-12 inline-block shadow-[2px_2px_0px_#000000]">P5 // DEV</span><span class="font-headline-md text-headline-md tracking-wider text-secondary uppercase -skew-x-6">PHANTOM</span></div><div class="flex items-center gap-space-2xs mt-0.5"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-code-snippet text-code-snippet text-on-surface-variant uppercase tracking-tighter">AVAILABLE FOR CONTRACT</span></div></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-high px-space-xs py-1 rounded-full -skew-x-6"><span class="w-2.5 h-2.5 rounded-full bg-primary-container mr-1"></span><span class="font-label-badge text-[11px] text-secondary font-bold tracking-widest">JOKER</span></div><div class="w-8 h-8 rounded-full p-0.5 bg-primary-container shadow-[2px_2px_0px_#000000] flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WfGuYWIKK5fkkzfe6s_mJ481EUl9KTJRR2yNFtSE9OickbH-fb_uNn9XccBxPD4IghX_xdw2GPjvDJrrF6ZicNSo1I7R80WOC3gNJ48T38D_3R-WA0N7jRal_TgH9l5kw8odX8Y6c9kuePaJH4tcDdqNG2lDLVnrWrycGrYgOH8CX9Iq5Z7V1_rwNtITfa23Oidv1KASLva_DGHeZwBub2uJEow2i1UO3eyn8Uu2M-N8RWy440IKVb5KkwNSJiwQh49hFfa7j5gqo"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Floating Persona Character Palette Selector Dock -->
+<div class="sticky top-20 z-40 px-gutter-mobile py-space-xs bg-surface/90 backdrop-blur-md transition-all duration-300">
+<div class="flex items-center justify-between gap-space-2xs overflow-x-auto pb-1 -skew-x-6">
+<button class="theme-pill active-theme px-space-xs py-1 bg-primary-container text-on-primary-container font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all" data-theme-btn="joker" onclick="setPhantomTheme('joker')">
+        ★ JOKER
+      </button>
+<button class="theme-pill px-space-xs py-1 bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all" data-theme-btn="fox" onclick="setPhantomTheme('fox')">
+        FOX
+      </button>
+<button class="theme-pill px-space-xs py-1 bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all" data-theme-btn="skull" onclick="setPhantomTheme('skull')">
+        SKULL
+      </button>
+<button class="theme-pill px-space-xs py-1 bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all" data-theme-btn="panther" onclick="setPhantomTheme('panther')">
+        PANTHER
+      </button>
+<button class="theme-pill px-space-xs py-1 bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all" data-theme-btn="queen" onclick="setPhantomTheme('queen')">
+        QUEEN
+      </button>
+</div>
+</div>
+<!-- SECTION 1: JOKER THEME (HERO & INTRODUCTION) -->
+<section class="relative px-gutter-mobile pt-space-md pb-space-2xl overflow-hidden" data-theme="joker" id="hero">
+<!-- Concentric graphic target background -->
+<div class="absolute -right-24 -top-12 w-80 h-80 rounded-full opacity-15 pointer-events-none flex items-center justify-center bg-radial from-primary-container via-surface-container to-transparent"></div>
+<!-- Take Your Heart Ribbon Badge -->
+<div class="flex items-center gap-space-xs mb-space-sm">
+<div class="bg-primary-container text-on-primary-container px-space-xs py-1 -skew-x-12 shadow-[3px_3px_0px_#000000] inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">TAKE YOUR TIME</span>
+</div>
+<span class="font-code-snippet text-code-snippet text-secondary-container uppercase tracking-tight bg-surface-container-lowest px-space-2xs py-0.5 -skew-x-6">
+        LVL. 99 // SENIOR ARCHITECT
+      </span>
+</div>
+<!-- Hero Title -->
+<div class="relative mb-space-md">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-secondary tracking-tight uppercase -skew-x-6 leading-tight drop-shadow-[4px_4px_0px_#e60012]">
+        FRONTEND<br/>
+<span class="bg-secondary text-surface px-space-2xs -skew-x-3 inline-block shadow-[4px_4px_0px_#000000]">DEVELOPER</span><br/>
+        &amp; UI ALCHEMIST
+      </h1>
+</div>
+<!-- Persona 5 Graphic Banner Slash -->
+<div class="relative w-full mb-space-lg">
+<div class="relative w-full h-64 bg-surface-container-lowest overflow-hidden shadow-[6px_6px_0px_#000000]" style="clip-path: polygon(0% 0%, 100% 4%, 96% 100%, 0% 95%);">
+<!-- Joker Visual Artwork -->
+<img alt="Joker Persona 5 styling" class="w-full h-full object-cover object-top filter contrast-125 saturate-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfGkZ168Md3TiTJs6nuMh-EHfTxizhGUgBR-sKBY9iWnCNnUQLyP0LyivkaA6Coi_Ojs7bD3h8HP4TP-P8BjRfeNaWtL8vD2ioTp1jA9gmejT-VkhS6LqePxk5GLZmeOJN64LIpUmQ-ye97sxJJu8pn-RAe6wA_S2f6iE85tgXVKj9RVmvCHuKjOI-G-gswPrl6NDEca3taNYdh7DOAo9oV-lqMH5mMQNChQ2kKWnmzh-WUG_6MsxMXhVzzqCmEjtSemk"/>
+<!-- Halftone Graphic Overlay Effect -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90 pointer-events-none"></div>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 px-space-xs py-0.5 -skew-x-12">
+<span class="font-label-badge text-[12px] text-primary-container tracking-widest uppercase">STEAL THE SHOW // 01</span>
+</div>
+<!-- All-Out Attack Comic Dialogue Tag -->
+<div class="absolute bottom-3 right-3 bg-secondary-container text-on-secondary px-space-xs py-1 font-label-badge text-[12px] -skew-x-6 shadow-[3px_3px_0px_#000000] font-bold">
+          "I WILL SEIZE YOUR CODEBASE"
+        </div>
+</div>
+</div>
+<!-- Bio Statement -->
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+      I craft pixel-perfect, accessible, and cinematic web experiences. Turning complex frontend architectures into rebellious, engaging interfaces that refuse to compromise on 60fps performance.
+    </p>
+<!-- Quick Action Slanted Pills -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-md">
+<a class="flex items-center justify-center gap-space-2xs bg-primary-container text-on-primary-container font-label-badge text-label-badge py-space-sm px-space-xs -skew-x-6 shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 transition-all" href="#projects">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>ALL-OUT ATTACK</span>
+</a>
+<a class="flex items-center justify-center gap-space-2xs bg-surface-container-high text-secondary font-label-badge text-label-badge py-space-sm px-space-xs -skew-x-6 shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 transition-all" href="#experience">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>MISSION LOG</span>
+</a>
+</div>
+<!-- Social Terminal Links -->
+<div class="flex items-center justify-start gap-space-xs pt-space-xs overflow-x-auto">
+<a class="px-space-xs py-1 bg-surface-container-low text-secondary font-code-snippet text-code-snippet -skew-x-6 shadow-[2px_2px_0px_#000000] flex items-center gap-1" href="#">
+<span class="text-tertiary">#</span> GITHUB
+      </a>
+<a class="px-space-xs py-1 bg-surface-container-low text-secondary font-code-snippet text-code-snippet -skew-x-6 shadow-[2px_2px_0px_#000000] flex items-center gap-1" href="#">
+<span class="text-secondary-container">#</span> LINKEDIN
+      </a>
+<a class="px-space-xs py-1 bg-surface-container-low text-secondary font-code-snippet text-code-snippet -skew-x-6 shadow-[2px_2px_0px_#000000] flex items-center gap-1" href="#">
+<span class="text-primary-container">#</span> TELEGRAM
+      </a>
+</div>
+</section>
+<!-- SECTION 2: FOX THEME (ABOUT ME - ICE BLUE / INDIGO) -->
+<section class="relative px-gutter-mobile py-space-xl bg-surface-container-low overflow-hidden" data-theme="fox" id="about">
+<!-- Header Character Badge -->
+<div class="mb-space-md">
+<div class="inline-flex items-center gap-space-2xs bg-tertiary-container text-on-tertiary-container px-space-xs py-1 -skew-x-12 shadow-[3px_3px_0px_#000000] mb-space-2xs">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">CONFIDANT // ABOUT ME - FOX CODE</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-secondary uppercase -skew-x-6">
+        AESTHETICS &amp; DISCIPLINE
+      </h2>
+</div>
+<!-- Narrative -->
+<div class="space-y-space-sm font-body-md text-body-md text-on-surface mb-space-lg leading-relaxed">
+<p>
+        Back in 2016, I began crafting web experiences with the conviction that user interfaces shouldn't simply serve data—they should evoke emotion. Over the last eight years, I have navigated high-growth startups and high-scale enterprise systems, elevating frontends with React, TypeScript, and modern canvas rendering.
+      </p>
+<p>
+        My focus revolves around composable architecture, microfrontends, and accessible component pipelines. I treat clean syntax like an artist treats brushstrokes: deliberate, uncompromising, and deeply expressive.
+      </p>
+</div>
+<!-- Yusuke Aesthetic Quote Card -->
+<div class="relative bg-surface-container-highest p-space-md -skew-x-3 shadow-[5px_5px_0px_#00daf3] mb-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[28px]">format_quote</span>
+<div>
+<p class="font-headline-md text-[18px] leading-snug text-secondary tracking-wide uppercase mb-1">
+            "Code should not only function seamlessly; it must steal the viewer's attention."
+          </p>
+<span class="font-code-snippet text-code-snippet text-tertiary-fixed-dim uppercase tracking-wider">
+            // PHILOSOPHY_MANIFESTO.TS
+          </span>
+</div>
+</div>
+</div>
+<!-- Core Tenets Bento Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container p-space-sm -skew-x-3 shadow-[3px_3px_0px_#000000]">
+<div class="font-headline-md text-headline-md text-tertiary">60 FPS</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Silky smooth WebGL &amp; CSS choreography</p>
+</div>
+<div class="bg-surface-container p-space-sm -skew-x-3 shadow-[3px_3px_0px_#000000]">
+<div class="font-headline-md text-headline-md text-secondary-container">100%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">WCAG AA accessible component structures</p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SKULL THEME (EXPERIENCE - ELECTRIC YELLOW & CARBON) -->
+<section class="relative px-gutter-mobile py-space-xl overflow-hidden" data-theme="skull" id="experience">
+<!-- Header Character Badge -->
+<div class="mb-space-md">
+<div class="inline-flex items-center gap-space-2xs bg-secondary-container text-on-secondary-container px-space-xs py-1 -skew-x-12 shadow-[3px_3px_0px_#000000] mb-space-2xs">
+<span class="material-symbols-outlined text-[16px]">sports_martial_arts</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">MISSION LOG // EXPERIENCE - SKULL DRIVE</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-secondary uppercase -skew-x-6">
+        OPERATIONAL HISTORY
+      </h2>
+</div>
+<!-- Experience Cards Stack (Brittany Chiang style) -->
+<div class="space-y-space-lg">
+<!-- Role 1 -->
+<div class="bg-surface-container p-space-md -skew-x-3 shadow-[5px_5px_0px_#fde400] transition-transform duration-200">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-code-snippet text-code-snippet text-secondary-container font-bold">2022 — PRESENT</span>
+<span class="bg-secondary-container/20 text-secondary-container px-2 py-0.5 font-label-badge text-[11px] uppercase">RANK 10 // CURRENT</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary tracking-wide uppercase leading-tight mb-1">
+          SENIOR FRONTEND ENGINEER
+        </h3>
+<div class="font-code-snippet text-code-snippet text-on-surface-variant mb-space-sm">
+          @ METAVERSE CORP (TOKYO / REMOTE)
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+          Spearheaded the rebuild of the flagship enterprise dashboard used by 1.2M daily users. Engineered high-throughput design systems, modular microfrontends, and sub-second query rendering. Reduced bundle overhead by 42%.
+        </p>
+<!-- Slanted Command Tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-highest text-secondary-container font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">React 19</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">TypeScript</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">TailwindCSS</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">GraphQL</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">Vitest</span>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="bg-surface-container p-space-md -skew-x-3 shadow-[5px_5px_0px_#000000] transition-transform duration-200">
+<div class="flex items-center justify-between gap-space-xs mb-space-2xs">
+<span class="font-code-snippet text-code-snippet text-on-surface-variant">2020 — 2022</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 font-label-badge text-[11px] uppercase">RANK 07</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary tracking-wide uppercase leading-tight mb-1">
+          FRONTEND DEVELOPER
+        </h3>
+<div class="font-code-snippet text-code-snippet text-on-surface-variant mb-space-sm">
+          @ NEOTOKYO LABS
+        </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+          Led full-stack client rebuild for rapid interactive fintech portal. Elevated Google Lighthouse performance rating from 48 to 96 through code-splitting, critical CSS inlining, and asset pipelines.
+        </p>
+<!-- Slanted Command Tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">Vue 3</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">Pinia</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">GSAP</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6 shadow-[1px_1px_0px_#000000]">Webpack</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PANTHER THEME (FEATURED PROJECTS - FIERCE CRIMSON / MAGENTA) -->
+<section class="relative px-gutter-mobile py-space-xl bg-surface-container-lowest overflow-hidden" data-theme="panther" id="projects">
+<!-- Header Character Badge -->
+<div class="mb-space-md">
+<div class="inline-flex items-center gap-space-2xs bg-primary-container text-on-primary-container px-space-xs py-1 -skew-x-12 shadow-[3px_3px_0px_#000000] mb-space-2xs">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">ALL-OUT ATTACK // PROJECTS - PANTHER FLAIR</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-secondary uppercase -skew-x-6">
+        FEATURED HEISTS
+      </h2>
+</div>
+<!-- Project Cards with Persona Cut-In Visuals -->
+<div class="space-y-space-lg">
+<!-- Project 1: Phantom Design System -->
+<div class="bg-surface-container p-space-md -skew-x-3 shadow-[6px_6px_0px_#e60012]">
+<div class="relative w-full h-44 mb-space-sm overflow-hidden bg-surface-container-highest shadow-[3px_3px_0px_#000000]" style="clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);">
+<img class="w-full h-full object-cover" data-alt="Cyberpunk high-contrast comic book design system user interface with stark crimson red and black elements, typography scale, battle buttons and sleek Figma tokens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQ7ak5L2lSfgcAIve-eSI0TJqUBW6TAR8XiaLTDkcrR4wRcbbBJXJV29pfWqAVCkLabJcDBq6J0-oU0CH9U49WiW6JRa6h0B2h78Em-UALC9gz74_3be5Nkhqg3D9G22yF1YZ92X2fKjznIFrrzyCWH6aLG3AFQXJ5AiqqB76ya0vv1Bpc8TuqgLf46io0u_2HaqoL4tbYI0EYSvJ87iDYHcDkCwF8ZNgyv-Y7bHG05VtvobxIbSwkw"/>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-container px-2 py-0.5 font-label-badge text-[11px] uppercase -skew-x-6">
+            CORE // V2.4
+          </div>
+</div>
+<div class="flex items-center justify-between gap-space-2xs mb-1">
+<h3 class="font-headline-md text-headline-md text-secondary uppercase">
+            PHANTOM UI SYSTEM
+          </h3>
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+          Production-grade UI kit built with 40+ accessible, fully headless components. Features zero-runtime token generation, dynamic Persona styling switchers, and bidirectional Figma syncing.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="bg-surface-container-highest text-primary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">React</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">Tailwind</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">Storybook</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-badge text-label-badge text-primary uppercase hover:underline" href="#">
+<span>INSPECT REPO</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Project 2: Shibuya Soundstream -->
+<div class="bg-surface-container p-space-md -skew-x-3 shadow-[6px_6px_0px_#00daf3]">
+<div class="relative w-full h-44 mb-space-sm overflow-hidden bg-surface-container-highest shadow-[3px_3px_0px_#000000]" style="clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);">
+<img class="w-full h-full object-cover" data-alt="High-contrast Shibuya crossing neon night view combined with an audio frequency waveform visualizer in persona acid punk style with cyan and electric yellow accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfkTDxbgpyHEyJXAbw9P7CCU5I8X_jRLJHyJ9Naz4Gz_07ySzSmGBM4H5lDmDL2gKBWczarYEEVU7p-htgwq7Di2G0dujhzBtDwOJIY-45Due08RHkjf9ZoEpXLbT-NvJzNSQC7Yfo15wVkKb9QC-ZIgyo9dWQGgjxFFOunJUalZexCJ3dCdZuXvhnT-GnbLBg1G4xPAdhw8CqXNnA9dus0Qq94gEojdlbsKcYwUNNPZATHL38-o5nXg"/>
+<div class="absolute top-2 right-2 bg-tertiary text-on-tertiary px-2 py-0.5 font-label-badge text-[11px] uppercase -skew-x-6">
+            AUDIO // LIVE
+          </div>
+</div>
+<div class="flex items-center justify-between gap-space-2xs mb-1">
+<h3 class="font-headline-md text-headline-md text-secondary uppercase">
+            SHIBUYA SOUNDSTREAM
+          </h3>
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+          Interactive synthesizer and dynamic audio visualizer utilizing the Web Audio API and custom Three.js shader nodes, reacting in real time to audio transients.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="bg-surface-container-highest text-tertiary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">Web Audio API</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">Three.js</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">GLSL</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-badge text-label-badge text-tertiary uppercase hover:underline" href="#">
+<span>RUN SYNTHESIZER</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Project 3: Palace Auditor -->
+<div class="bg-surface-container p-space-md -skew-x-3 shadow-[6px_6px_0px_#fde400]">
+<div class="relative w-full h-44 mb-space-sm overflow-hidden bg-surface-container-highest shadow-[3px_3px_0px_#000000]" style="clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);">
+<img class="w-full h-full object-cover" data-alt="Futuristic web performance audit dashboard showing radial charts, speed dials, comic halftone patterns and lightning bolts in persona 5 yellow and black style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdaRk8q7bWuRtGvwq7sWJalDONyXMsIHGS3O4N2Y7Vm-_WIrTK8q5UHMSocLCAO8ZcCT_SdcApH7nvNfpQcMsSgMKlurcevCzR_MWLnfHbw6tiKdP2JNncn6uuGwHPJko_RxGBCYdl-KXT-cIdy4V7nJntoXtbILy9TAzIMGSjV1nxhv-PsctXjYqNnsdvLAL2i83RL70kf1SYOgLYdNLY5UPQ-d_hBdYJiEbIxpRRR6H6wrYsAECH4A"/>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container px-2 py-0.5 font-label-badge text-[11px] uppercase -skew-x-6">
+            AUDIT // 100%
+          </div>
+</div>
+<div class="flex items-center justify-between gap-space-2xs mb-1">
+<h3 class="font-headline-md text-headline-md text-secondary uppercase">
+            PALACE AUDITOR
+          </h3>
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+          Automated diagnostic engine auditing Core Web Vitals, tree-shaking efficacy, and accessibility violations directly through Chrome DevTools extension integration.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="bg-surface-container-highest text-secondary-container font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">TypeScript</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">Chrome API</span>
+<span class="bg-surface-container-highest text-secondary font-code-snippet text-[11px] px-2 py-0.5 -skew-x-6">Puppeteer</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-badge text-label-badge text-secondary-container uppercase hover:underline" href="#">
+<span>LAUNCH DIAGNOSTIC</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 5: QUEEN THEME (SKILLS & TECH STACK - PRECISION CYAN) -->
+<section class="relative px-gutter-mobile py-space-xl bg-surface-container overflow-hidden" data-theme="queen" id="skills">
+<!-- Header Character Badge -->
+<div class="mb-space-md">
+<div class="inline-flex items-center gap-space-2xs bg-tertiary-container text-on-tertiary-container px-space-xs py-1 -skew-x-12 shadow-[3px_3px_0px_#000000] mb-space-2xs">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">ARSENAL // SKILLS - QUEEN SPEC</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-secondary uppercase -skew-x-6">
+        TECHNICAL DIRECTIVES
+      </h2>
+</div>
+<!-- Grouped Skill Clusters -->
+<div class="space-y-space-md">
+<!-- Cluster 1 -->
+<div class="bg-surface-container-lowest p-space-sm -skew-x-3 shadow-[4px_4px_0px_#00daf3]">
+<span class="font-code-snippet text-code-snippet text-tertiary uppercase tracking-wider block mb-space-xs font-bold">
+          [01] CORE ARCHITECTURE
+        </span>
+<div class="flex flex-wrap gap-2">
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">TypeScript 5.x</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">React / Next.js</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Vue 3 / Nuxt</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">State Machines (XState)</div>
+</div>
+</div>
+<!-- Cluster 2 -->
+<div class="bg-surface-container-lowest p-space-sm -skew-x-3 shadow-[4px_4px_0px_#fde400]">
+<span class="font-code-snippet text-code-snippet text-secondary-container uppercase tracking-wider block mb-space-xs font-bold">
+          [02] CREATIVE DEV &amp; MOTION
+        </span>
+<div class="flex flex-wrap gap-2">
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Three.js / WebGL</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">GSAP Timeline</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Tailwind CSS</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Framer Motion</div>
+</div>
+</div>
+<!-- Cluster 3 -->
+<div class="bg-surface-container-lowest p-space-sm -skew-x-3 shadow-[4px_4px_0px_#e60012]">
+<span class="font-code-snippet text-code-snippet text-primary uppercase tracking-wider block mb-space-xs font-bold">
+          [03] TOOLING &amp; QUALITY
+        </span>
+<div class="flex flex-wrap gap-2">
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Vite / Turborepo</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Vitest / Playwright</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">CI/CD GitHub Actions</div>
+<div class="bg-surface-container-high px-space-xs py-1 font-label-badge text-[12px] text-secondary -skew-x-6">Core Web Vitals</div>
+</div>
+</div>
+</div>
+<!-- Calling Card Callout Box -->
+<div class="mt-space-xl p-space-md bg-primary-container text-on-primary-container -skew-x-6 shadow-[6px_6px_0px_#000000]">
+<div class="flex items-center gap-space-2xs mb-1">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="font-label-badge text-label-badge uppercase tracking-widest">TRANSMIT CALLING CARD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/90 mb-space-sm leading-relaxed">
+        Ready to infiltrate your product roadmaps and spark unprecedented visual delight? Let's initiate contact.
+      </p>
+<a class="inline-block bg-surface text-secondary font-label-badge text-label-badge px-space-md py-space-xs -skew-x-3 shadow-[3px_3px_0px_#000000] uppercase active:scale-95 transition-all" href="mailto:joker@phantomdev.io">
+        SEND ENCRYPTED SIGNAL
+      </a>
+</div>
+</section>
+</div>
+<script>
+  // Character Theme Mapping
+  const phantomThemes = {
+    joker: {
+      accentColor: '#e60012',
+      badgeClass: 'bg-primary-container text-on-primary-container'
+    },
+    fox: {
+      accentColor: '#00daf3',
+      badgeClass: 'bg-tertiary-container text-on-tertiary-container'
+    },
+    skull: {
+      accentColor: '#fde400',
+      badgeClass: 'bg-secondary-container text-on-secondary-container'
+    },
+    panther: {
+      accentColor: '#ff0055',
+      badgeClass: 'bg-primary-container text-on-primary-container'
+    },
+    queen: {
+      accentColor: '#00daf3',
+      badgeClass: 'bg-tertiary text-on-tertiary'
+    }
+  };
+
+  // Manual Palette Switcher
+  function setPhantomTheme(characterKey) {
+    const theme = phantomThemes[characterKey];
+    if (!theme) return;
+
+    // Update buttons in the floating character dock
+    document.querySelectorAll('.theme-pill').forEach(btn => {
+      if (btn.getAttribute('data-theme-btn') === characterKey) {
+        btn.className = 'theme-pill px-space-xs py-1 bg-primary-container text-on-primary-container font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all';
+      } else {
+        btn.className = 'theme-pill px-space-xs py-1 bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase shadow-[2px_2px_0px_#000000] active:scale-95 transition-all';
+      }
+    });
+  }
+
+  // Intersection Observer for dynamic scrolling character theme sync
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const themeId = entry.target.getAttribute('data-theme');
+          if (themeId) {
+            setPhantomTheme(themeId);
+          }
+        }
+      });
+    }, {
+      rootMargin: '-30% 0px -40% 0px',
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('section[data-theme]').forEach(sec => {
+      observer.observe(sec);
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_25px_rgba(230,0,18,0.15)]" data-active-classes="bg-primary-container text-on-primary-container shadow-[3px_3px_0px_#000000] scale-105"><div class="flex items-center justify-between h-20 px-space-xs overflow-x-auto"><a aria-current="page" class="flex-1 min-w-[62px] min-h-[44px] py-1.5 px-1 mx-0.5 flex flex-col items-center justify-center -skew-x-6 transition-all duration-150 rounded bg-primary-container text-on-primary-container shadow-[3px_3px_0px_#000000] scale-105" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-badge text-[11px] tracking-wider mt-0.5 uppercase">ABOUT</span></a><a class="flex-1 min-w-[62px] min-h-[44px] py-1.5 px-1 mx-0.5 flex flex-col items-center justify-center -skew-x-6 transition-all duration-150 rounded text-on-surface-variant hover:text-secondary" data-path="experience" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-badge text-[11px] tracking-wider mt-0.5 uppercase">EXP</span></a><a class="flex-1 min-w-[62px] min-h-[44px] py-1.5 px-1 mx-0.5 flex flex-col items-center justify-center -skew-x-6 transition-all duration-150 rounded text-on-surface-variant hover:text-secondary" data-path="projects" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-badge text-[11px] tracking-wider mt-0.5 uppercase">CODE</span></a><a class="flex-1 min-w-[62px] min-h-[44px] py-1.5 px-1 mx-0.5 flex flex-col items-center justify-center -skew-x-6 transition-all duration-150 rounded text-on-surface-variant hover:text-secondary" data-path="skills" href="#"><span class="material-symbols-outlined text-[20px]">bolt</span><span class="font-label-badge text-[11px] tracking-wider mt-0.5 uppercase">SKILLS</span></a><a class="flex-1 min-w-[62px] min-h-[44px] py-1.5 px-1 mx-0.5 flex flex-col items-center justify-center -skew-x-6 transition-all duration-150 rounded text-on-surface-variant hover:text-secondary" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">mail</span><span class="font-label-badge text-[11px] tracking-wider mt-0.5 uppercase">CALL</span></a></div></nav></body></html>
